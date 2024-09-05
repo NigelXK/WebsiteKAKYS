@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kantin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Menu Kantin SMAKYS</h1>
+    </header>
+
+    <main>
+        <!-- Bagian Otentikasi -->
+        <section id="authContainer">
+            <div id="loginContainer">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                    <button type="submit">Login</button>
+                    <p id="loginError" class="errorMessage"></p>
+                </form>
+                <button id="showSignup">Register</button>
+            </div>
+
+            <div id="signupContainer" style="display: none;">
+                <h2>Signup</h2>
+                <form id="signupForm">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" required>
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                    <button type="submit">Signup</button>
+                    <p id="signupError" class="errorMessage"></p>
+                </form>
+                <button id="showLogin">Login</button>
+            </div>
+        </section>
+
+        <!-- Bagian Aplikasi -->
+        <section id="appContainer" style="display: none;">
+            <div>
+                <label for="canteenSelect">Pilih Kantin:</label>
+                <select id="canteenSelect">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+
+            <section id="menuSection" style="display: none;">
+                <h2>Menu Kantin</h2>
+                <ul id="menuList">
+                    <!-- Menu items will be populated here by JavaScript -->
+                </ul>
+                <button id="showCartButton">Lihat Keranjang</button>
+            </section>
+
+            <section id="cartSection" style="display: none;">
+                <h2>Keranjang</h2>
+                <ul id="cartList">
+                    <!-- Cart items will be populated here by JavaScript -->
+                </ul>
+                <p>Total: <span id="totalPrice">0</span> IDR</p>
+                <button id="checkoutButton">Checkout</button>
+            </section>
+
+            <section id="paymentSection" style="display: none;">
+                <h2>Pembayaran</h2>
+                <form id="paymentForm">
+                    <label for="paymentMethod">Metode Pembayaran:</label>
+                    <select id="paymentMethod" required>
+                        <option value="eKakys">E-Kakys</option>
+                        <option value="onlinePayment">Online Payment</option>
+                    </select>
+                    <button type="submit">Bayar</button>
+                    <p id="paymentMessage" class="errorMessage"></p>
+                </form>
+            </section>
+
+            <section id="receiptSection" style="display: none;">
+                <h2>Bukti Pembayaran</h2>
+                <p id="receiptMessage">Pembayaran berhasil.</p>
+                <p>No. Antrian: <span id="queueNumber"></span></p>
+                <p>No. Pos: <span id="postNumber"></span></p>
+                <div id="barcodeContainer" style="display: none;">
+                    <p>Scan Barcode untuk pembayaran:</p>
+                    <img id="barcodeImage" alt="Barcode">
+                </div>
+                <button id="logoutButton">Logout</button>
+            </section>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

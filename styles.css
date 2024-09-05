@@ -1,0 +1,107 @@
+/* Reset margin dan padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Pastikan body dan main mengisi tinggi halaman */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex: 1; /* Mengizinkan main mengisi ruang yang tersedia */
+    overflow-y: auto; /* Memungkinkan scroll jika konten melebihi tinggi */
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 0.9rem;
+}
+
+#authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#loginContainer, #signupContainer {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 300px;
+}
+
+#loginContainer label, #signupContainer label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#loginContainer input, #signupContainer input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#paymentSection, #receiptSection {
+    margin-top: 2rem;
+}
+
+#barcodeContainer {
+    margin-top: 1rem;
+    text-align: center;
+}
